@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="warn">
+  <p>Эта страница только для этого компьютера. Пароля нет, в общую сеть её не выставляйте.</p>
+</section>
+<h2>Все карточки</h2>
+<p>Сотрудник видит только статус «проверено». Пункт и ссылку правьте в файле data/cards.csv, затем нажмите кнопку ниже.</p>
+<form method="post" action="{{ url_for('reload_cards') }}">
+  <button type="submit">Перечитать CSV</button>
+</form>
+<ul class="results">
+  {% for card in cards %}
+  <li>
+    <a href="{{ url_for('edit_card', card_id=card.card_id) }}">{{ card.question }}</a>
+    <p class="meta">{{ card.question_id }} · {{ card.category }}</p>
+    <p>{% include "status.html" %}</p>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

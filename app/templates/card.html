@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+<p class="meta">{{ card.question_id }} · {{ card.category }}</p>
+<h2>{{ card.question }}</h2>
+<p>{% include "status.html" %}</p>
+<article>
+  <h3>Ответ</h3>
+  <p>{{ card.answer_text }}</p>
+  <h3>Когда применяется</h3>
+  <p>{{ card.applicability }}</p>
+  <h3>Норма</h3>
+  <p>{{ card.document_title }}</p>
+  <p>{{ card.act_number }}</p>
+  <p>Пункт: {{ card.clause_ref }}</p>
+  <p>Редакция: {{ card.edition }}</p>
+  {% if card.source_url.startswith("http://") or card.source_url.startswith("https://") %}
+  <p><a href="{{ card.source_url }}">Открыть источник</a></p>
+  {% endif %}
+  {% if card.checked_at %}
+  <p class="meta">Дата проверки: {{ card.checked_at }}{% if card.checked_by %}. Проверил: {{ card.checked_by }}{% endif %}</p>
+  {% endif %}
+</article>
+{% endblock %}
