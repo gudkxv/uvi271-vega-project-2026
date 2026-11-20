@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} — помощник по нормативке</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="mark">УВИ-271 · команда «Вега»</p>
+      <h1><a href="{{ url_for('home') }}">Помощник по нормативке</a></h1>
+      <p class="note">Учебный справочник готовых ответов. Это не юридическое заключение и не расчёт тарифа.</p>
+      <nav>
+        <a href="{{ url_for('home') }}">Поиск</a>
+        <a href="{{ url_for('g0_page') }}">Каталог Г0</a>
+        <a href="{{ url_for('edit_list') }}">Правка карточек</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    {% block body %}{% endblock %}
+  </main>
+  <footer>
+    <div class="wrap">
+      <p>Прототип Г1 на этом компьютере. Журнал обращений и внешние модели сюда не подключаются.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PT Sans", sans-serif;
+  background: #f3f0e8;
+  color: #1d1a16;
+  line-height: 1.45;
+}
+
+.wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1rem 1.2rem;
+}
+
+header {
+  background: #1f3d34;
+  color: #f6f3ea;
+}
+
+header a {
+  color: inherit;
+}
+
+h1 {
+  margin: 0.2rem 0;
+  font-size: 1.6rem;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h2 {
+  margin-bottom: 0.4rem;
+}
+
+.mark {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+.note {
+  margin: 0.2rem 0 0.8rem;
+  color: #d9d3c5;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 0.9rem 0.2rem 0;
+}
+
+main a {
+  color: #1a4f86;
+}
+
+.meta {
+  margin: 0.2rem 0;
+  color: #5c564e;
+}
+
+form.search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.grow {
+  flex: 1;
+  min-width: 12rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #b7b1a6;
+  border-radius: 4px;
+  background: #fff;
+}
+
+button {
+  font: inherit;
+  background: #1f3d34;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: 2px solid #1a4f86;
+  outline-offset: 2px;
+}
+
+article,
+.results li,
+.miss,
+.warn,
+.okbox {
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  margin: 0.8rem 0;
+}
+
+article,
+.results li {
+  background: #fff;
+  border: 1px solid #e0dbd2;
+  list-style: none;
+}
+
+.results {
+  padding: 0;
+}
+
+.miss,
+.warn {
+  background: #f8efe0;
+  border: 1px solid #e2d2b0;
+}
+
+.okbox {
+  background: #e5f2e8;
+  border: 1px solid #b7d7c0;
+}
+
+form.edit label {
+  margin: 0.9rem 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.badge.draft {
+  background: #efe4c4;
+}
+
+.badge.ok {
+  background: #d5eadc;
+}
+
+.badge.old {
+  background: #f0d4d0;
+}
+
+footer {
+  color: #5c564e;
+  font-size: 0.92rem;
+}

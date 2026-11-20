@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+<h2>Каталог Г0</h2>
+<p>Те же десять тем, но без готового ответа. Здесь только документ и пункт: так можно засечь время поиска по ссылке и сравнить его с карточками.</p>
+{% for card in cards %}
+<article>
+  <h3>{{ card.question }}</h3>
+  <p class="meta">{{ card.question_id }} · {{ card.category }}</p>
+  <p>{% include "status.html" %}</p>
+  <p>{{ card.document_title }}</p>
+  <p>{{ card.act_number }}</p>
+  <p>Пункт: {{ card.clause_ref }}</p>
+  <p>Редакция: {{ card.edition }}</p>
+  {% if card.source_url.startswith("http://") or card.source_url.startswith("https://") %}
+  <p><a href="{{ card.source_url }}">Открыть источник</a></p>
+  {% endif %}
+</article>
+{% endfor %}
+{% endblock %}

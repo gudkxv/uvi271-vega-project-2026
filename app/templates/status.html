@@ -1,0 +1,7 @@
+{% if card.status == "проверено" %}
+<span class="badge ok">проверено</span>
+{% elif card.status == "устарело" %}
+<span class="badge old">устарело</span>
+{% else %}
+<span class="badge draft">черновик</span>
+{% endif %}
